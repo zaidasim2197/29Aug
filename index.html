@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<style>
+     .zaid {
+        display:inline-block;
+        background-color: #806ae4;
+        border: black;
+        color: whitesmoke;
+        padding: 25px 25px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 5px 5px rgb(86, 86, 192), 10px 10px rgb(79, 29, 115), 15px 15px rgb(41, 148, 116);      }
+      .button {
+        display:inline-block;
+        background-color: #b8b5c7;
+        border: black;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        box-shadow: 5px 5px rgb(86, 86, 192);
+        border-radius:  15px;
+      }
+</style>
+<body style="background-color: #b8b5c7 ; text-align: center;">
+    <h1><u><strong>"Zaid's Multiplication Table"</strong></u></h1>
+    <form onsubmit="dosum(); return false" class="zaid">
+    Enter a Number:
+    <input type="number" id="num1" style=" box-shadow: 5px 5px rgb(86, 86, 192);"/><br /><br />
+    Enter a Limit:
+    <input type="number" id="num2" style=" box-shadow: 5px 5px rgb(86, 86, 192);" /><br>
+   <br> <input type="button" value="Equals To" onClick="multiply()" class="button">
+    <p id="result"></p>
+</form>
+    <script>
+        alert("Zaid's Multiplication Table")
+        function multiply() {
+            let firstno = document.getElementById('num1').value;
+            let secondno = document.getElementById('num2').value;
+            let equal = "";
+            for (let i = 1; i <= secondno; i++) {
+                equal = equal +  firstno + " * " + i + " = " + i * firstno + "<br/>";
+            }
+            document.getElementById("result").innerHTML = equal;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
